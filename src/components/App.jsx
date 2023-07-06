@@ -18,13 +18,15 @@ export const App = () => {
   }, [dispatch]);
 
   return (
-    <div className={css.app}>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <h2>Contacts</h2>
+    <>
+      <div className={css.app}>
+        <h1>Phonebook</h1>
+        <ContactForm />
+        <h2>Contacts</h2>
+        <Filter />
+        <ContactList />
+      </div>
       {isLoading && !error && <Loader />}
-      <Filter />
-      <ContactList />
-    </div>
+    </>
   );
 };
